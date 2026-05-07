@@ -34,11 +34,11 @@ The dataset contains information about used vehicles, including:
 - vehicle type
 
 Initial exploration:
-- inspecting dataset structure and data types,
-- identifying missing values,
-- analyzing summary statistics,
-- detecting outliers and unrealistic values,
-- and exploring relationships between variables.
+- inspecting dataset structure and data types
+- identifying missing values
+- analyzing summary statistics
+- detecting outliers 
+- exploring relationships between variables.
 
 ---
 
