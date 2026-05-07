@@ -145,3 +145,18 @@ Based on the findings, the following recommendations are suggested for used car 
 
 This project demonstrates how machine learning and data analysis techniques can be used to better understand the used car market and identify major pricing drivers. The findings provide meaningful insights into depreciation trends and consumer valuation behavior while also highlighting opportunities for future model improvement. 
 Additional improvements could likely be achieved by incorporating categorical variables such as manufacturer, condition, and transmission type in future iterations of the project.
+
+
+## Recommendations for Dealerships
+
+Based on the findings from this project, the following recommendations are suggested for used car dealerships:
+
+1. Prioritize inventory consisting of newer vehicles with lower mileage, since these vehicles retain higher value.
+
+2. Monitor depreciation trends when pricing older or high-mileage vehicles.
+
+3. Use data-driven pricing methods to improve pricing consistency and competitiveness within the used car market.
+
+4. Continue collecting and analyzing additional vehicle data to improve long-term inventory planning and pricing accuracy.
+
+5. Consider integrating predictive pricing models into dealership decision-making workflows to support inventory valuation and purchasing decisions.
