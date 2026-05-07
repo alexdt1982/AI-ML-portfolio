@@ -32,7 +32,6 @@ The dataset contains information about used vehicles, including:
 - fuel type
 - transmission
 - vehicle type
-- and additional vehicle metadata
 
 Initial exploration:
 - inspecting dataset structure and data types,
