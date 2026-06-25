@@ -110,7 +110,6 @@ Compared:
 Used GridSearchCV to tune:
 
 - Logistic Regression
-  - C
   - class_weight
 - KNN
   - number of neighbors
@@ -119,7 +118,6 @@ Used GridSearchCV to tune:
   - maximum depth
   - minimum samples split
 - SVM
-  - C
   - kernel
   - class_weight
 
