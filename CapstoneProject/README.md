@@ -31,14 +31,6 @@ The confusion matrix further illustrates the trade-off between correctly identif
 
 The Logistic Regression model provides a strong and interpretable baseline for fraud detection. While its performance is constrained by the severe class imbalance inherent in real-world financial transaction data, it establishes a meaningful benchmark for future comparison.
 
-Potential improvements include:
-
-- Training more complex models such as Random Forest, XGBoost, or Gradient Boosting.
-- Hyperparameter tuning using GridSearchCV or RandomizedSearchCV.
-- Applying resampling techniques (e.g., SMOTE) to the training data.
-- Engineering additional behavioral and temporal features.
-- Optimizing the classification probability threshold to improve fraud detection performance.
-
 Overall, this baseline demonstrates the importance of evaluating fraud detection systems using metrics beyond accuracy and highlights the challenges posed by highly imbalanced datasets.
 
 ## Lessons Learned
