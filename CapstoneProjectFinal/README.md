@@ -25,7 +25,7 @@ Representative model comparison (test set):
 
 ### Rationale
 
-Credit card fraud is a large and growing cost to the financial system. When fraudulent transactions are not caught quickly, organizations suffer direct financial losses, damaged customer trust, and higher operational costs from disputes and investigations. Individual cardholders bear the stress and inconvenience of stolen funds and cancelled cards. Detecting fraud faster and more accurately reduces losses, protects customers, and lets fraud teams focus their limited attention on the transactions most likely to be fraudulent. A machine learning approach is well suited to this because fraud leaves subtle, multi‑feature patterns that are difficult to capture with fixed hand‑written rules.
+Credit card fraud is a large and growing cost to the financial system. When fraudulent transactions are not caught quickly, organizations can suffer direct financial losses, damaged customer trust, and higher operational costs from disputes/investigations. Individual cardholders bear the stress and inconvenience of stolen funds and cancelled cards. Detecting fraud faster and more accurately reduces losses, protects customers, and lets fraud teams focus their limited attention on the transactions most likely to be fraudulent. A machine learning approach is well suited to this because fraud leaves subtle, multi‑feature patterns that are difficult to capture with fixed hand‑written rules.
 
 ### Research Question
 
@@ -37,7 +37,7 @@ How can machine learning models be used to identify patterns in fraudulent finan
 
 The data are real credit card transactions made by European cardholders over two days in September 2013. The original dataset has **284,807 transactions** and 31 columns: `Time` (seconds elapsed since the first transaction), `V1`–`V28` (anonymized features produced by a **PCA transformation** to protect confidentiality, so their original meaning is hidden), `Amount` (the transaction value), and `Class` (the target label: `1` = fraud, `0` = legitimate).
 
-**Exploratory data analysis:** The defining characteristic of this data is **extreme class imbalance** — only **492 of the 284,807 transactions are fraudulent (~0.172%)**. This single fact drives every modeling decision: a model that predicts "never fraud" would be ~99.8% accurate while catching zero fraud, so **accuracy is not a useful metric**. There are no missing values. Fraudulent transactions tend toward smaller amounts than legitimate ones (consistent with card‑testing behavior), and a correlation analysis against the `Class` label shows that a small group of the PCA features (notably V14, V17, V12, V10, V11, V4) are far more associated with fraud than the rest. These EDA visualizations — the class‑count bar chart (plotted on a log scale so the tiny fraud bar is visible), amount and time distributions by class, and the feature‑correlation chart — are generated in Part I of the notebooks.
+**Exploratory data analysis:** The defining characteristic of this data is **extreme class imbalance** — only **492 of the 284,807 transactions are fraudulent (~0.172%)**. This fact drives every modeling decision: a model that predicts "never fraud" would be ~99.8% accurate while catching zero fraud, so **accuracy is not a useful metric**. There are no missing values. Fraudulent transactions tend toward smaller amounts than legitimate ones (consistent with card‑testing behavior), and a correlation analysis against the `Class` label shows that a small group of the PCA features (notably V14, V17, V12, V10, V11, V4) are far more associated with fraud than the rest. These EDA visualizations — the class‑count bar chart (plotted on a log scale so the tiny fraud bar is visible), amount and time distributions by class, and the feature‑correlation chart — are generated in Part I of the notebooks.
 
 **Cleaning and preparation:** The dataset is already clean (no nulls, all numeric). Two preparation steps are applied. First, `Time` and `Amount` are **standardized** to the same scale as the already‑scaled PCA features, because distance‑ and gradient‑based models (KNN, Logistic Regression) are sensitive to feature scale; standardization is done inside each model pipeline. Second, the data is split into training and test sets using a **stratified** 75/25 split so that both sets preserve the rare fraud proportion — without stratification, a random split could leave too few fraud cases in the test set to evaluate reliably.
 
@@ -72,7 +72,7 @@ Model performance is compared with confusion matrices and ROC / Precision‑Reca
 - [Part II — Evaluation & Interpretation notebook](./CreditCardFraudEvaluation.ipynb)
 - [Dataset on Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) — download `creditcard.csv` and place it in the same folder as the notebooks before running.
 
-**To reproduce:** download `creditcard.csv` from the Kaggle link, put it beside the two notebooks, open Part I and choose *Run → Run All Cells*, then do the same for Part II. All figures and metrics regenerate automatically.
+**To reproduce:** download `creditcard.csv` from the Kaggle link, put it in the data folder beside the src folder, open Part I and choose *Run → Run All Cells*, then do the same for Part II. All figures and metrics regenerate automatically.
 
 ### Contact and Further Information
 
